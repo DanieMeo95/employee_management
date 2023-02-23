@@ -26,7 +26,7 @@ public class Task extends BaseEntity {
     private String description;
     @Column(name = "factory")
     private Boolean factory;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
