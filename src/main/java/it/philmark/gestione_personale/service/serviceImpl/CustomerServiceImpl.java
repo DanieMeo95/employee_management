@@ -6,6 +6,7 @@ import it.philmark.gestione_personale.dto.SkillDto;
 import it.philmark.gestione_personale.exception.EmployeeManagementException;
 import it.philmark.gestione_personale.exception.Messages;
 import it.philmark.gestione_personale.mapper.CustomerMapper;
+import it.philmark.gestione_personale.model.Customer;
 import it.philmark.gestione_personale.repository.CustomerRepository;
 import it.philmark.gestione_personale.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +37,8 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public MessageDto insert(CustomerDto customerDto) {
-        customerRepository.save(customerMapper.mapDtoToEntity(customerDto));
+        Customer customer = customerMapper.mapDtoToEntity(customerDto);
+        customerRepository.save(customer);
         return new MessageDto(Messages.successInsert, HttpStatus.OK);
     }
 

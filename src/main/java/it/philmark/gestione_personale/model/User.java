@@ -10,6 +10,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
+import java.util.List;
+import java.util.Set;
+
 @SuperBuilder
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true, callSuper = false)
@@ -32,4 +35,6 @@ public class User extends BaseEntity {
         private String username;
         @Column(name = "password")
         private String password;
+        @OneToMany(mappedBy = "user_id")
+        private List<UserRole> ruoli;
 }
