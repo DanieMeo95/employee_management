@@ -1,11 +1,12 @@
 package it.philmark.gestione_personale.dto;
 
 
-import jakarta.annotation.Nullable;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
+import org.springframework.lang.Nullable;
 
 @SuperBuilder
 @Getter

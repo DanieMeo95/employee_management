@@ -1,7 +1,8 @@
 package it.philmark.gestione_personale.model.jwt;
 
-import jakarta.validation.constraints.NotBlank;
 
+
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
 
