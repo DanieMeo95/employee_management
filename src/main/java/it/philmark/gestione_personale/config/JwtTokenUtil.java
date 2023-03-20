@@ -29,6 +29,7 @@ public class JwtTokenUtil {
 				.setExpiration(new Date((new Date()).getTime() + jwtExpirationMs)).signWith(SignatureAlgorithm.HS512, jwtSecret)
 				.signWith(SignatureAlgorithm.HS512, jwtSecret)
 				.compact();
+		System.out.println(accessToken);
 		return accessToken;
 	}
 	public String generateTokenFromUsername(String username) {
