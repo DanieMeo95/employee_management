@@ -18,11 +18,7 @@ public class InsertUserDto extends BaseDto{
     @NotBlank
     private String surname;
     @NotBlank
-    private String mobile;
-    @NotBlank
     private String username;
     @NotBlank
     private String password;
-    @NotBlank
-    private String repeatePassword;
 }
